@@ -9,7 +9,7 @@ app = Flask(__name__)
 def check_coordinates(species,chr, start, stop):
     # Get species and coordinates from POST request data
     checking_status = checking(species, chr, start, stop)
-    return checking_status
+    return jsonify(checking_status)
 
 if __name__ == '__main__':
     app.run(debug=True)
